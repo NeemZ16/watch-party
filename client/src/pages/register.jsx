@@ -3,15 +3,15 @@
  * which open auth modals if needed. Otherwise both  
  * options then lead to room page.
  */
-function App() {
+function Register() {
 
   return (
     <div className='pg-wrapper'>
-      <h1>Watch Party!</h1>
-      <a className='btn primary' href='room'>create room</a>
+      <h1>register</h1>
+      <a className='btn primary' href=''>create room</a>
       <button className='btn secondary'>join room</button>
     </div>
   )
 }
 
-export default App
+export default Register

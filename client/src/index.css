@@ -1,11 +1,16 @@
 /* css reset */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 /* colors and variables */
 :root {
-  --bg: #e1e1e1;
+  --bg: #1e1e1e;
+  --h-col: #b8e791;
+  --primary: #2d623f;
+  --secondary: #95c897;
+  --hov-primary: #3b7c51;
+  --hov-secondary: #7aae7c;
 }
