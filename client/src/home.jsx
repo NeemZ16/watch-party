@@ -1,22 +1,29 @@
 function Home() {
 
-  const isLoggedIn = true;
+  const AcctBtns = () => {
+    let loggedIn = false;
+    if (loggedIn) {
+      return (
+        <>
+          <button className='btn primary'>create room</button>
+          <button className='btn secondary'>join room</button>
+        </>
+      )
+    }
+
+    return (
+      <>
+        <button className='btn secondary'>login</button>
+        <button className='btn secondary'>register</button>
+        <button className='btn secondary'>join room</button>
+      </>
+    )
+  }
 
   return (
     <div className='pg-wrapper'>
       <h1>Watch Party!</h1>
-      {isLoggedIn ? (
-        <div>
-          <a className='btn primary' href='room'>create room</a>
-          <button className='btn secondary'>join room</button>
-        </div>
-      ) : (
-        <div>
-          <a className='btn secondary' href='room'>login</a>
-          <a className='btn secondary' href='room'>register</a>
-          <button className='btn primary'>join room</button>
-        </div>
-      )}
+      <AcctBtns/>
     </div>
   )
 }

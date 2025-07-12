@@ -6,6 +6,7 @@ import './App.css'
 import Home from './home.jsx'
 import Room from './pages/room.jsx';
 import Login from './pages/login.jsx';
+import Register from './pages/register.jsx';
 
 createRoot(document.getElementById('root')).render(
   <BrowserRouter>
