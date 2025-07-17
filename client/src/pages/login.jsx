@@ -1,17 +1,17 @@
-/**
- * Home page of the app. Has create and join options  
- * which open auth modals if needed. Otherwise both  
- * options then lead to room page.
- */
-function Login() {
+import { useState } from "react";
+import Modal from "../components/layouts/modal";
+
+function Login(isOpen, close) {
+  function submitLogin() {
+    console.log("submit login clicked :)");
+  }
 
   return (
-    <div className='pg-wrapper'>
-      <h1>login</h1>
-      <a className='btn primary' href=''>create room</a>
-      <button className='btn secondary'>join room</button>
-    </div>
+    <Modal title={"Login"} isOpen={isOpen} close={close} action={submitLogin}>
+      <input type="text" />
+      <input type="text" />
+    </Modal>
   )
 }
 
-export default Login
+export default Login;
