@@ -8,34 +8,36 @@ body {
 }
 
 #root {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .pg-wrapper {
-    display: flex;
-    gap: 0.8rem;
-    flex-direction: column;
-    text-align: center;
+  display: flex;
+  gap: 0.8rem;
+  flex-direction: column;
+  text-align: center;
 }
 
 h1,
 h2,
 h3 {
-  color: var(--h-col);
+  color: var(--neutral);
   margin-bottom: 1rem;
 }
 
-button, .btn {
+button,
+.btn {
   border: none;
   padding: 5px 10px;
   border-radius: 3px;
   cursor: pointer;
   text-decoration: none;
   font-size: 1rem;
+  background-color: var(--neutral);
 }
 
 .primary:hover {
@@ -46,12 +48,19 @@ button, .btn {
   background-color: var(--hov-secondary);
 }
 
-.primary, .primary:active {
+.primary,
+.primary:active {
   background-color: var(--primary);
   color: #fff;
 }
 
-.secondary, .secondary:active {
+.secondary,
+.secondary:active {
   background-color: var(--secondary);
   color: #000;
+}
+
+.delete,
+.delete:active {
+  background-color: var(--delete);
 }
