@@ -2,8 +2,8 @@ import closeIcon from "../../assets/close.svg";
 
 function Modal({title, action, children, isOpen, close}) {
   if (!isOpen) {
-    console.log("is open false", isOpen)
-    return null
+    console.log("is open false", isOpen);
+    return null;
   };
 
   return (

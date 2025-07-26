@@ -3,11 +3,11 @@ import Login from "./pages/login";
 
 function Home() {
   const [isLoggedIn, setLoggedIn] = useState(false);
-  const [isOpenLogin, toggleOpenLogin] = useState(false);
+  const [isOpenLogin, setOpenLogin] = useState(false);
 
   const closeLogin = () => {
-    toggleOpenLogin(!isOpenLogin);
-    
+    console.log("close clicked", isOpenLogin);
+    setOpenLogin(!isOpenLogin);
   }
 
   return (
@@ -17,7 +17,7 @@ function Home() {
         <button className='btn primary'>create room</button>
       ):(
         <div>
-          <button className='btn secondary' onClick={closeLogin}>login</button>
+          <button className='btn secondary' onClick={() => setOpenLogin(true)}>login</button>
           <button className='btn secondary'>register</button>
         </div>
       )}
