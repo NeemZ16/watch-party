@@ -1,13 +1,28 @@
 import { useState } from "react";
 import Login from "./pages/login";
+import Register from "./pages/register";
 
 function Home() {
   const [isLoggedIn, setLoggedIn] = useState(false);
   const [isOpenLogin, setOpenLogin] = useState(false);
+  const [isOpenRegister, setOpenRegister] = useState(false);
 
   const closeLogin = () => {
-    console.log("close clicked", isOpenLogin);
-    setOpenLogin(!isOpenLogin);
+    setOpenLogin(false);
+  }
+
+  const closeRegister = () => {
+    setOpenRegister(false);
+  }
+
+  const openLogin = () => {
+    setOpenLogin(true);
+    setOpenRegister(false);
+  }
+
+  const openRegister = () => {
+    setOpenRegister(true);
+    setOpenLogin(false);
   }
 
   return (
@@ -17,12 +32,13 @@ function Home() {
         <button className='btn primary'>create room</button>
       ):(
         <div>
-          <button className='btn secondary' onClick={() => setOpenLogin(true)}>login</button>
-          <button className='btn secondary'>register</button>
+          <button className='btn secondary' onClick={openLogin}>login</button>
+          <button className='btn secondary' onClick={openRegister}>register</button>
         </div>
       )}
       <button className='btn secondary'>join room</button>
       <Login isOpen={isOpenLogin} close={closeLogin}/>
+      <Register isOpen={isOpenRegister} close={closeRegister}/>
     </div>
   )
 }

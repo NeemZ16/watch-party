@@ -2,14 +2,12 @@ import { useState } from "react";
 import Modal from "../components/layouts/modal";
 
 function Login({isOpen, close}) {
-  function submitLogin() {
+  function submit() {
     console.log("submit login clicked :)");
-    console.log("is open:", isOpen);
-    console.log(close)
   }
 
   return (
-    <Modal title="Login" isOpen={isOpen} close={close} action={submitLogin}>
+    <Modal title="Login" isOpen={isOpen} close={close} action={submit}>
       <input type="text" />
       <input type="text" />
     </Modal>
