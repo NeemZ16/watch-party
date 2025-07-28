@@ -16,4 +16,26 @@
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: var(--bg);
+    padding: var(--padding);
+    border-radius: var(--rounding);
+    display: flex;
+    flex-direction: column;
+    gap: var(--padding);
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+button.delete {
+    padding: 0;
+    width: 20px;
+    height: 20px;
+}
+
+.modal-content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--rounding);
 }

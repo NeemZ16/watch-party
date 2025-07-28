@@ -22,11 +22,16 @@ body {
   text-align: center;
 }
 
+.stack {
+  display: flex;
+  flex-direction: column;
+  gap: var(--rounding);
+}
+
 h1,
 h2,
 h3 {
   color: var(--neutral);
-  margin-bottom: 1rem;
 }
 
 button,
@@ -63,4 +68,14 @@ button,
 .delete,
 .delete:active {
   background-color: var(--delete);
+}
+
+label {
+  color: #fff;
+}
+
+.input-field {
+  display: flex;
+  justify-content: space-between;
+  gap: 5px;
 }

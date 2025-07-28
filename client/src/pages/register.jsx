@@ -1,4 +1,5 @@
 import Modal from "../components/layouts/modal";
+import Input from "../components/interactions/input";
 
 function Register({isOpen, close}) {
   function submit() {
@@ -7,9 +8,9 @@ function Register({isOpen, close}) {
 
   return (
     <Modal title="Register" isOpen={isOpen} close={close} action={submit}>
-      <input type="text" />
-      <input type="text" />
-      <input type="text" />
+      <Input label="username/email" id="user"/>
+      <Input label="password" id="pwd" type="password"/>
+      <Input label="confirm password" id="pwd" type="password"/>
     </Modal>
   )
 }

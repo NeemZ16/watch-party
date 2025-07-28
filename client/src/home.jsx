@@ -29,16 +29,19 @@ function Home() {
     <div className='pg-wrapper'>
       <h1>Watch Party!</h1>
       {isLoggedIn ? (
-        <button className='btn primary'>create room</button>
-      ):(
-        <div>
+        <div className="stack">
+          <button className='btn primary'>create room</button>
+          <button className='btn secondary'>join room</button>
+        </div>
+      ) : (
+        <div className="stack">
           <button className='btn secondary' onClick={openLogin}>login</button>
           <button className='btn secondary' onClick={openRegister}>register</button>
+          <button className='btn secondary'>join room</button>
+          <Login isOpen={isOpenLogin} close={closeLogin} />
+          <Register isOpen={isOpenRegister} close={closeRegister} />
         </div>
       )}
-      <button className='btn secondary'>join room</button>
-      <Login isOpen={isOpenLogin} close={closeLogin}/>
-      <Register isOpen={isOpenRegister} close={closeRegister}/>
     </div>
   )
 }
