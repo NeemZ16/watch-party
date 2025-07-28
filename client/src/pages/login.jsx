@@ -8,7 +8,7 @@ function Login({ isOpen, close }) {
   }
 
   return (
-    <Modal title="Login" isOpen={isOpen} close={close} action={submit}>
+    <Modal title="Log In" isOpen={isOpen} close={close} action={submit}>
         <Input label="username" id="user"/>
         <Input label="password" id="pwd" type="password"/>
     </Modal>

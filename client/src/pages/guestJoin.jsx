@@ -8,9 +8,8 @@ function GuestJoin({ isOpen, close }) {
   }
 
   return (
-    <Modal title="Login" isOpen={isOpen} close={close} action={submit}>
-        <Input label="username" id="user"/>
-        <Input label="password" id="pwd" type="password"/>
+    <Modal title="Join as Guest" isOpen={isOpen} close={close} action={submit}>
+        <Input label="Display Name" id="name"/>
     </Modal>
   )
 }

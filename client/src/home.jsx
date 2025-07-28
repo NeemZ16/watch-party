@@ -24,10 +24,18 @@ function Home() {
   const openLogin = () => {
     setOpenLogin(true);
     setOpenRegister(false);
+    setOpenJoin(false);
   }
 
   const openRegister = () => {
     setOpenRegister(true);
+    setOpenLogin(false);
+    setOpenJoin(false);
+  }
+
+  const openJoin = () => {
+    setOpenJoin(true);
+    setOpenRegister(false);
     setOpenLogin(false);
   }
 
@@ -41,9 +49,9 @@ function Home() {
         </div>
       ) : (
         <div className="stack">
-          <button className='btn secondary' onClick={openLogin}>login</button>
+          <button className='btn secondary' onClick={openLogin}>log in</button>
           <button className='btn secondary' onClick={openRegister}>register</button>
-          <button className='btn primary'>join room</button>
+          <button className='btn primary' onClick={openJoin}>join room</button>
           <Login isOpen={isOpenLogin} close={closeLogin} />
           <Register isOpen={isOpenRegister} close={closeRegister} />
           <GuestJoin isOpen={isOpenJoin} close={closeJoin}/>

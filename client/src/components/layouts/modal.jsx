@@ -8,8 +8,8 @@ function Modal({title, action, children, isOpen, close}) {
   };
 
   return (
-    <div className="modal-overlay">
-      <div className="modal">
+    <div className="modal-overlay" onClick={close}>
+      <div className="modal" onClick={(e) => {e.stopPropagation()}}>
         <div className="modal-header">
           <h2>{title}</h2>
           <button title="close" className="delete" onClick={close}><img src={closeIcon} alt="close" /></button>
