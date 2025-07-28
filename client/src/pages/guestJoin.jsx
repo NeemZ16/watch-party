@@ -2,9 +2,9 @@ import { useState } from "react";
 import Modal from "../components/layouts/modal";
 import Input from "../components/interactions/input";
 
-function Login({ isOpen, close }) {
+function GuestJoin({ isOpen, close }) {
   function submit() {
-    console.log("submit login clicked :)");
+    console.log("submit join clicked :)");
   }
 
   return (
@@ -15,4 +15,4 @@ function Login({ isOpen, close }) {
   )
 }
 
-export default Login;
+export default GuestJoin;

@@ -9,11 +9,12 @@
 :root {
   --bg: #1e1e1e;
   --neutral: #e7e7aa;
-  --primary: #2d623f;
+  --primary: #446943;
   --secondary: #95c897;
-  --hov-primary: #3b7c51;
-  --hov-secondary: #7aae7c;
+  --hov-primary: #385637;
+  --hov-secondary: #82ab83;
   --delete: #ff7e7e;
+  --hov-delete: #d06b6b;
   --padding: 20px;
   --rounding: 15px;
 }

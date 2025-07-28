@@ -70,6 +70,10 @@ button,
   background-color: var(--delete);
 }
 
+.delete:hover {
+  background-color: var(--hov-delete);
+}
+
 label {
   color: #fff;
 }
