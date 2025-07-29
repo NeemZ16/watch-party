@@ -82,4 +82,13 @@ label {
   display: flex;
   justify-content: space-between;
   gap: 5px;
+  align-items: center;
+}
+
+input {
+  padding: 2px 5px;
+}
+
+input:focus-visible {
+  outline-color: var(--neutral);
 }

@@ -18,6 +18,7 @@
     background-color: var(--bg);
     padding: var(--padding);
     border-radius: var(--rounding);
+    border: 1px solid var(--secondary);
     display: flex;
     flex-direction: column;
     gap: var(--padding);
