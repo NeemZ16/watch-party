@@ -1,25 +1,49 @@
 import { useState } from "react";
-import Modal from "../components/layouts/modal";
+import FormPage from "../components/layouts/formPage";
 import Input from "../components/interactions/input";
 
-function Login({ isOpen, close }) {
-  const [username, setUsername] = useState("");
-  const [pwd, setPwd] = useState("");
+const Login = ({ onLogin }) => {
+  const [formData, setFormData] = useState({
+    username: "",
+    password: ""
+  });
 
-  function submit(e) {
-    if (!username || !pwd || !confPwd) {
-      e.preventDefault();
-      return;
-    }
-    console.log("submit login clicked :)");
-  }
+  const handleChange = (e) => {
+    const { id, value } = e.target;
+    setFormData((prev) => ({ ...prev, [id]: value }));
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    fetch("/api/login", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(formData)
+    })
+      .then((res) => res.json().then((data) => ({ ok: res.ok, data })))
+      .then(({ ok, data }) => {
+        if (ok) {
+          onLogin(data);
+        } else {
+          alert(data.message || "Login failed");
+        }
+      })
+      .catch((err) => {
+        console.error(err);
+        alert("Something went wrong");
+      });
+  };
 
   return (
-    <Modal title="Log In" isOpen={isOpen} close={close} action={submit}>
-        <Input label="username" id="user" value={username} onChange={e => setUsername(e.target.value)}/>
-        <Input label="password" id="pwd" type="password" value={pwd} onChange={e => setPwd(e.target.value)}/>
-    </Modal>
-  )
-}
+    <FormPage title='Log In'>
+      <form onSubmit={handleSubmit}>
+        <Input label="username" id="user"  value={formData.username} onChange={handleChange}/>
+        <Input label="password" id="password" type="password" value={formData.password} onChange={handleChange}/>
+      </form>
+    </FormPage>
+  );
+};
 
 export default Login;
+
