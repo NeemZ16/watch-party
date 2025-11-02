@@ -16,3 +16,4 @@
 <Button variant='delete' disabled>b1</Button>
 
 <FormField label='hello world' placeholder='nonono'/>
+<FormField label='hello world' placeholder='nonono' disabled/>

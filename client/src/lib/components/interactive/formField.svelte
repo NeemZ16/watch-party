@@ -1,11 +1,11 @@
 <script>
-    let {label, placeholder, type = 'text'} = $props();
+    let {label, placeholder, type = 'text', disabled=false} = $props();
     let value = $state('');
 </script>
 
 <label>
     {label}:
-    <input {type} {placeholder} {value}>
+    <input {type} {placeholder} {value} {disabled}>
 </label>
 
 <style>
@@ -13,10 +13,11 @@
         display: flex;
         flex-direction: column;
         font-weight: 600;
+        gap: 0.313rem;
     }
 
     input {
-        background: var(--gray-dark);
+        background: var(--gray-darkest);
         border: 1px solid var(--gray-light);
         border-radius: 0.313rem;
         color: #FFFFFF;
@@ -25,6 +26,15 @@
 
     input::placeholder {
         color: var(--gray-light);
+    }
+
+    input:disabled {
+        cursor: not-allowed;
+        border-color: var(--gray);
+    }
+
+    input:disabled::placeholder {
+        color: var(--gray);
     }
 
 </style>
