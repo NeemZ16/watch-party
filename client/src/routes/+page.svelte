@@ -1,6 +1,7 @@
 <script>
     import Navbar from '$lib/components/navbar.svelte';
     import Button from '$lib/components/interactive/button.svelte';
+    import FormField from '$lib/components/interactive/formField.svelte';
 </script>
 
 <Navbar />
@@ -13,3 +14,5 @@
 <Button variant='secondary' disabled>b1</Button>
 <Button variant='neutral' disabled>b1</Button>
 <Button variant='delete' disabled>b1</Button>
+
+<FormField label='hello world' placeholder='nonono'/>

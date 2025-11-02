@@ -15,7 +15,7 @@
 	.btn {
 		padding: 0.313rem 0.625rem;
 		border: none;
-		border-radius: 5px;
+		border-radius: 0.313rem;
 		cursor: pointer;
         font-size: 1rem;
         color: #000;

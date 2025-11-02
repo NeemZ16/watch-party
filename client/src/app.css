@@ -25,11 +25,16 @@
 
     --delete: #FF7E7E;
     --delete-hov: #D06B6B;
+    --focus: #6cc2da;
 
     --font-sans: 'Inter', system-ui, sans-serif;
     
     /* 20px */
     --page-padding: 1.25rem;
+}
+
+*:focus-visible {
+    outline: 1.5px solid var(--focus);
 }
 
 body {

@@ -3,7 +3,7 @@
 </script>
 
 <div id="navbar">
-    <img src={logo} alt="watch party!">
+    <a href="/"><img src={logo} alt="watch party!"></a>
 </div>
 
 <style>
