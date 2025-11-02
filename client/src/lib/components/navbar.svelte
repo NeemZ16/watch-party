@@ -10,6 +10,8 @@
     #navbar {
         background-color: var(--neutral);
         padding: 0.5rem var(--page-padding);
+        margin-bottom: var(--page-padding);
+        width: 100%;
     }
     
     img {

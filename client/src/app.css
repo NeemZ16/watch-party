@@ -23,8 +23,12 @@
     --gray-dark: #575757;
     --gray-darkest: #383838;
 
+    --delete: #FF7E7E;
+    --delete-hov: #D06B6B;
+
     --font-sans: 'Inter', system-ui, sans-serif;
     
+    /* 20px */
     --page-padding: 1.25rem;
 }
 
